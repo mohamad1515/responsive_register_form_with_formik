@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+@keyframes rotate {
+  100% {
+    background-position: 25% 50%;
+  }
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  height: 100vh;
+  padding: 0 24px;
+  /* background-image: url("./assets/background.svg");*/
+  background-color: red;
+  background-size: cover;
+  font-family: "IRANSans";
+  color: #000;
+  animation: rotate 5s infinite alternate linear;
+  background-color: #0a5dff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%235772FF' stroke-width='46.4' stroke-opacity='0.05' %3E%3Ccircle fill='%230A5DFF' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23005bf3' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%230058e6' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%230055d9' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%230052cc' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23004ebf' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23004bb1' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%230047a4' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23004296' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23003e89' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%2300397b' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%2300346e' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23003061' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23002b54' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23002648' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%2300213b' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23011c2f' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23071724' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.login {
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 90%;
+  padding: 20px;
+  border-radius: 1.25rem;
+  background: #fff;
+  text-align: center;
+}
+
+.login > img {
+  width: 160px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.login > h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.login > h3 {
+  color: rgb(0 0 0 /38%);
+  margin: 0 0 6px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 30px;
+  place-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.form > :is(input, button) {
+  height: 34px;
+  width: 100%;
+  outline: none;
+  padding: 0;
+  border-radius: 10px;
+  font-family: inherit;
+}
+
+.form > input {
+  background: #eee;
+  border: 0;
+  padding: 5px 10px;
+}
+
+.form > button {
+  cursor: pointer;
+  height: 43px;
+  background: #03a9f4;
+  color: #f9f9f9;
+  border: 0;
+}
+
+.form > a {
+  color: #01b7ff;
+  font-size: 14px !important;
+  text-align: left;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 680px) {
+  .login {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 1439px) and (min-width: 1023px) {
+  .login {
+    width: 40% !important;
+  }
+}
+
+@media (width >= 1440px) {
+  .login {
+    width: 30% !important;
+  }
+}
+
+@media (width >= 680px) {
+  .login {
+    top: 0;
+    right: 0;
+    left: auto;
+    translate: 0 0;
+    margin: 0;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (width >= 500px) {
+  body {
+    padding: 0;
+  }
+}
+@media (width >= 320px) {
+  .form {
+    gap: 15px;
+  }
+  h2,
+  h4 {
+    margin: 0;
+  }
+}
